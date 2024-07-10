@@ -1,0 +1,74 @@
+/* -----------------------------
+            Global
+--------------------------------*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Inter;
+  src: url(/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+  font-display: swap;
+}
+
+:root {
+  --primary: #1f1f1f;
+  --secondary: #545454;
+  --white: #ffffff;
+}
+
+* {
+  font-family: Inter;
+}
+
+body{
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  @apply font-medium text-7xl leading-[90px] lg:text-[133px] lg:leading-[160.96px] text-[var(--primary)];
+}
+
+h2 {
+  @apply font-semibold text-4xl leading-[45px] lg:text-[58px] lg:leading-[70.19px] text-[var(--primary)] ;
+}
+
+li a {
+  @apply font-semibold text-lg leading-[90px] lg:text-[22px] lg:leading-[26.63px] text-[var(--primary)];
+}
+
+.title {
+  @apply font-semibold text-3xl leading-[36.31px];
+}
+
+.paragraph {
+  @apply font-medium text-[var(--secondary)];
+}
+
+.btn {
+  @apply bg-[var(--primary)] hover:bg-[var(--secondary)] duration-200 rounded ;
+}
+.btn a {
+  @apply text-[var(--white)];
+}
+.section {
+  @apply py-20;
+}
+
+/* -----------------------------
+            Header
+--------------------------------*/
+.menubar span {
+  @apply w-10 border-2 border-black;
+}
+
+/* -----------------------------
+            accordion
+--------------------------------*/
+.accordion .title {
+  @apply font-semibold text-2xl leading-[39.65px];
+}
