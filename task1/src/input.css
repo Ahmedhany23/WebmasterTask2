@@ -62,7 +62,7 @@ li a {
 /* -----------------------------
             Header
 --------------------------------*/
-.menubar span {
+.burger span {
   @apply w-10 border-2 border-black;
 }
 

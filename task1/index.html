@@ -22,7 +22,7 @@
     Header
     --------------------->
 
-    <header id="header">
+    <header id="header" class="relative">
       <div
         class="container mx-auto flex lg:gap-10 justify-between mt-[25px] items-center px-1"
       >
@@ -41,17 +41,46 @@
             <li><a href="">Support</a></li>
           </ul>
         </nav>
-        <!-- Menu Bar -->
-        <div class="menubar flex flex-col gap-1 lg:hidden">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+
         <button
           class="btn hidden lg:block px-5 lg:px-14 md:text-xl py-4 whitespace-nowrap"
         >
           <a href="#">Sign Up</a>
         </button>
+
+        <!-- Menu Bar -->
+
+        <div
+          id="burger"
+          class="burger flex flex-col gap-1 lg:hidden cursor-pointer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div
+        id="menubar"
+        class="lg:hidden menubar fixed w-full h-screen -top-full right-0 bottom-0 bg-white p-10 z-40 duration-500"
+      >
+        <div id="close" class="text-right font-bold text-3xl cursor-pointer">
+          X
+        </div>
+        <div class="flex flex-col justify-center  text-center">
+          <nav>
+            <ul class="flex flex-col gap-10">
+              <li><a href="" class="text-2xl">Home</a></li>
+              <li><a href="" class="text-2xl">Services</a></li>
+              <li><a href="" class="text-2xl">Contact</a></li>
+              <li><a href="" class="text-2xl">Support</a></li>
+            </ul>
+          </nav>
+
+          <button class="btn px-5 md:text-xl py-4 whitespace-nowrap mt-20">
+            <a href="#">Sign Up</a>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -166,7 +195,9 @@
           <h2>Our Services</h2>
         </div>
         <!-- Services Items -->
-        <div class="flex flex-col items-center xl:flex-row gap-16 p-2 sm:p-0">
+        <div
+          class="flex flex-col items-center xl:flex-row gap-16 p-2 sm:p-0 text-center xl:text-left"
+        >
           <!-- Lighting Design -->
           <div
             class="flex flex-col items-center md:flex-row gap-10 md:items-start"
@@ -217,13 +248,15 @@
     <section id="accordion" class="section">
       <div class="container mx-auto">
         <div
-          class="flex flex-col items-center xl:flex-row xl:items-start gap-[30px] p-1 sm:p-0"
+          class="flex flex-col-reverse items-center xl:flex-row xl:items-start gap-[30px] p-1 sm:p-0"
         >
-          <img src="/images/image.webp" alt="image" />
+          <img src="/images/image.webp" alt="image" class="p-4 xl:p-0" />
 
-          <div class="flex flex-col gap-10 items-stretch">
-            <h2>Designing Your Dream With Brilliance</h2>
-            <p class="paragraph text-[24px]">
+          <div
+            class="flex flex-col gap-10   xl:justify-normal xl:items-stretch"
+          >
+            <h2 class="text-center xl:text-left">Designing Your Dream With Brilliance</h2>
+            <p class="paragraph text-xl xl:text-2xl text-center xl:text-left">
               Elevate your spaces with bespoke interior designs that reflect
               your unique style and aspirations, crafted with precision and
               brilliance for an unforgettable living experience
@@ -233,11 +266,11 @@
 
             <div class="accordion">
               <div
-                class="flex justify-between items-center border-b border-b-[#DADADA] py-5"
+                class="flex justify-between items-center border-b border-b-[#DADADA] py-5 "
               >
                 <p class="title">Living Room Interior Design</p>
                 <button
-                  class="p-1 rounded-full hover:bg-[var(--secondary)] duration-300"
+                  class="p-1 rounded-full hover:border hover:border-black duration-300"
                 >
                   <img src="/icons/plus.png" alt="plus" />
                 </button>
@@ -247,7 +280,7 @@
               >
                 <p class="title">Commercial Office Room Interior Design</p>
                 <button
-                  class="p-1 rounded-full hover:bg-[var(--secondary)] duration-300"
+                  class="p-1 rounded-full hover:border hover:border-black duration-300"
                 >
                   <img src="/icons/plus.png" alt="plus" />
                 </button>
@@ -255,7 +288,7 @@
             </div>
 
             <!-- Learn More Button -->
-            <button class="btn w-[275px] h-[80px] text-2xl">
+            <button class="btn w-[275px] h-[80px] text-2xl mx-auto xl:mx-0 ">
               <a href="">Learn More</a>
             </button>
           </div>
@@ -272,7 +305,9 @@
         <div class="flex flex-col xl:flex-row gap-20 xl:gap-0">
           <!-- Steps -->
           <div class="flex flex-col items-center p-2 sm:p-0 sm:items-start">
-            <h2>Designing Your Dream in Three Simple Steps</h2>
+            <h2 class="text-center xl:text-left">
+              Designing Your Dream in Three Simple Steps
+            </h2>
             <div class="flex gap-8 items-center">
               <div class="flex flex-col gap-16 items-center">
                 <div
@@ -334,7 +369,11 @@
             </div>
           </div>
           <!-- Image -->
-          <img src="/images/luxury-living-room.webp" alt="living room" />
+          <img
+            src="/images/luxury-living-room.webp"
+            alt="living room"
+            class="p-4 xl:p-0"
+          />
         </div>
       </div>
     </section>
@@ -354,7 +393,9 @@
             class="w-[400px] hidden 2xl:block xl:max-w-[711px] xl:w-full"
           />
 
-          <h2 class="max-w-[704px]">What Our Customers Say About Us</h2>
+          <h2 class="max-w-[704px] text-center xl:text-left">
+            What Our Customers Say About Us
+          </h2>
 
           <div class="2xl:absolute -bottom-20 right-0 flex">
             <!-- Card 1-->
@@ -447,7 +488,7 @@
         </p>
 
         <form
-          class="flex flex-col gap-10 sm:flex-row relative bg-white max-w-[979px] w-full pl-8 pr-4 py-3 shadow-md justify-between items-center top-[125px]"
+          class="flex flex-col gap-10 sm:flex-row relative bg-white max-w-[979px] w-fit sm:w-full pl-8 pr-4 py-3 shadow-md justify-center sm:justify-between items-center top-[125px]"
         >
           <div class="flex gap-2 items-center w-full h-full">
             <img src="/icons/email.png" alt="email" />
@@ -472,7 +513,7 @@
     <footer class="w-full lg:h-[600px] bg-[var(--primary)]">
       <div class="container mx-auto pt-48">
         <div
-          class="flex flex-col lg:flex-row justify-center items-center sm:items-stretch gap-32 p-4"
+          class="flex flex-col gap-16 lg:gap-20 lg:flex-row  p-4 lg:p-0"
         >
           <div class="flex flex-col gap-10 items-start">
             <img src="/images//logo2.webp" alt="logo" />
@@ -497,11 +538,13 @@
               </li>
             </ul>
           </div>
-          <div class="flex flex-col md:flex-row gap-20">
+          <div
+            class="flex flex-col md:flex-row gap-10 md:gap-20 justify-evenly w-full"
+          >
             <!-- Our Services -->
             <div class="flex flex-col gap-6">
               <p class="text-white text-2xl font-semibold">Our Services</p>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col lg:gap-6">
                 <li>
                   <a href="" class="text-[#D1D1D1] font-medium text-[22px]"
                     >Interior design</a
@@ -525,8 +568,10 @@
               </ul>
             </div>
             <div class="flex flex-col gap-6">
-              <p class="text-white text-2xl font-semibold">Our Services</p>
-              <ul class="flex flex-col gap-2">
+              <p class="text-white text-2xl font-semibold whitespace-nowrap">
+                Our Services
+              </p>
+              <ul class="flex flex-col lg:gap-6">
                 <li>
                   <a href="" class="text-[#D1D1D1] font-medium text-[22px]"
                     >Reviews</a
@@ -549,7 +594,7 @@
                 </li>
               </ul>
             </div>
-            <div class="flex flex-col gap-7">
+            <div class="flex flex-col gap-6">
               <p class="text-white text-2xl font-semibold">Our Services</p>
               <p class="text-[#d1d1d1] font-medium text-[22px]">
                 info@vivadecor.com
@@ -565,7 +610,7 @@
 
     <!-- Arrow Scroll Up -->
     <button
-      class="arrowScrollUp shadow-md p-4 rounded bg-white fixed bottom-20 right-10 z-20"
+      class="arrowScrollUp shadow-md p-4 rounded bg-white fixed bottom-10 right-5 md:bottom-20 md:right-10 z-20"
     >
       <img
         src="/icons/arrowL.png"

@@ -1,3 +1,30 @@
+/* Menu Bar Mobile */
+let burger = document.querySelector("#burger");
+let close = document.querySelector("#close");
+let menuBar = document.querySelector("#menubar");
+
+/* Show Menu */
+burger.onclick = () => {
+  menuBar.classList.toggle("top-0");
+  menuBar.classList.toggle("-top-full");
+};
+
+/* Hide Menu */
+close.onclick = () => {
+  menuBar.classList.add("-top-full");
+  menuBar.classList.remove("top-0");
+};
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------
     Number Counter
 ------------------ */
@@ -19,10 +46,10 @@ valueDisplays.forEach((valueDisplays) => {
     Scroll To Our Services
 ------------------ */
 let arrowBtnScrollDown = document.querySelector(".arrowScrollDown");
-const element = document.getElementById("services");
+const services = document.getElementById("services");
 
 arrowBtnScrollDown.onclick = () => {
-    element.scrollIntoView({ behavior: "smooth", block: "end" });
+  services.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
 
