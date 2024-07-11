@@ -6,12 +6,12 @@ let menuBar = document.querySelector("#menubar");
 /* Show Menu */
 burger.onclick = () => {
   menuBar.classList.toggle("top-0");
-  menuBar.classList.toggle("-top-full");
+  menuBar.classList.toggle("-top-[200%]");
 };
 
 /* Hide Menu */
 close.onclick = () => {
-  menuBar.classList.add("-top-full");
+  menuBar.classList.add("-top-[200%]");
   menuBar.classList.remove("top-0");
 };
 
