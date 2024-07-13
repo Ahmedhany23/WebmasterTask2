@@ -49,7 +49,11 @@ const Result = () => {
     if (display_result.innerHTML.includes("/0")) {
       display_result.innerHTML = "Error";
       display_equation.innerHTML = "";
-    } else {
+    } 
+    else if(display_result.innerHTML === undefined){
+      display_result.innerHTML = "";
+    }
+    else {
       display_equation.innerHTML = display_result.innerHTML;
       display_result.innerHTML = `=${eval(display_result.innerHTML)}`;
     }
