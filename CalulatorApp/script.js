@@ -15,19 +15,17 @@ const AddToDisplay = (input) => {
       display_equation.innerHTML = display_result.innerHTML;
       display_result.innerHTML = display_result.innerHTML.slice(1) + input;
     } else {
-    /* Else when the key is number */
+      /* Else when the key is number */
       display_equation.innerHTML = display_result.innerHTML;
       display_result.innerHTML = "";
       display_result.innerHTML += input;
     }
   } else if (display_result.innerHTML == "Error") {
-
-  /* Handle The Error */
+    /* Handle The Error */
     display_result.innerHTML = "";
     display_result.innerHTML += input;
   } else {
-
-  /* OtherWise */
+    /* OtherWise */
     display_result.innerHTML += input;
   }
 };
@@ -42,20 +40,22 @@ const clearDisplay = () => {
 /* Function Calculate the value */
 
 const Result = () => {
-
   try {
     /* If The Number division By zero */
-    
+
     if (display_result.innerHTML.includes("/0")) {
       display_result.innerHTML = "Error";
       display_equation.innerHTML = "";
-    } 
-    else if(display_result.innerHTML === undefined){
+    } else if (display_result.innerHTML === "=undefined") {
       display_result.innerHTML = "";
-    }
-    else {
+    } else {
       display_equation.innerHTML = display_result.innerHTML;
-      display_result.innerHTML = `=${eval(display_result.innerHTML)}`;
+
+      if (display_result.innerHTML === "Error") {
+        display_result.innerHTML = "";
+      } else {
+        display_result.innerHTML = `=${eval(display_result.innerHTML)}`;
+      }
     }
   } catch (error) {
     display_result.innerHTML = "Error";
@@ -66,7 +66,6 @@ const Result = () => {
 /* Function delete last element when click it */
 
 const backwards = () => {
-
   /* Handle The Error */
   if (display_result.innerHTML == "Error") {
     display_result.innerHTML = "";
