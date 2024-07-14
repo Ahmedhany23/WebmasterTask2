@@ -1,7 +1,9 @@
 /*------------------ 
      Global
 --------------------*/
-* , *::before , *::after{
+*,
+*::before,
+*::after {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -31,14 +33,16 @@
   --dark-background-item: #616161;
 }
 
-body.light {
+body {
   width: 100%;
   height: 100vh;
+}
+
+body.light {
   background-color: var(--background);
 }
+
 body.dark {
-  width: 100%;
-  height: 100vh;
   background-color: var(--dark-item-bg);
 }
 
@@ -53,7 +57,6 @@ body.dark {
 /*--------------------
     Change Mode
 ---------------------*/
-
 .mode {
   position: fixed;
   top: 30%;
@@ -71,29 +74,29 @@ body.dark {
 
 .mode .light {
   background-color: var(--light-secondary);
-
 }
+
 .mode .light::before {
-content: "Light";
-display: flex;
-justify-content: center;
-align-items: center;
-color: var(--white);
+  content: "Light";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
 }
 
 .mode .dark {
   background-color: var(--dark-background);
 }
+
 .mode .dark::before {
   content: "Dark";
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--dark-primary);
-  }
+}
 
 /* Media Query */
-
 /* Medium Screen */
 @media screen and (max-width: 968px) {
   .mode {
@@ -107,14 +110,11 @@ color: var(--white);
 }
 
 /* Small Screen */
-
 @media screen and (max-width: 400px) {
   .mode {
     width: 100%;
     top: 0;
     margin: 15px auto;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
   }
@@ -122,7 +122,6 @@ color: var(--white);
     width: 60px;
     height: 30px;
     border-radius: 0;
-    border: none;
     font-size: 20px;
   }
 }
@@ -132,8 +131,6 @@ color: var(--white);
     width: 100%;
     top: 0;
     margin: 15px auto;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
   }
@@ -141,58 +138,58 @@ color: var(--white);
     width: 60px;
     height: 30px;
     border-radius: 0;
-    border: none;
     font-size: 20px;
   }
 }
-
 
 /*-------------------
       Calculator
 ----------------------*/
 
 /* Light Mode */
-
 .light .calculator {
   border-radius: 39px;
   padding: 16px;
   background-color: var(--light-background);
 }
+
 .light .display {
   text-align: right;
-  padding-bottom: 70px;
-  padding-top: 104px;
+  padding: 104px 0 70px;
 }
-.light .calculator .display .equation {
+
+.light .display .equation {
   color: var(--equation-text);
   font-size: 1.5rem;
 }
 
-.light .calculator .display .result {
+.light .display .result {
   font-size: 3rem;
   font-weight: 500;
-  height: 100%;
 }
 
-.light .calculator .buttons {
+.light .buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.light .calculator .buttons .left {
+
+.light .buttons .left {
   display: grid;
   grid-template-columns: repeat(3, minmax(62px, 1fr));
   gap: 10px;
 }
+
 .light .button.zero {
   grid-column: span 2;
 }
 
-.light .calculator .buttons .right {
+.light .buttons .right {
   display: grid;
   grid-template-columns: repeat(1, minmax(62px, 1fr));
   gap: 10px;
 }
+
 .light .button {
   display: flex;
   align-items: center;
@@ -208,23 +205,47 @@ color: var(--white);
   text-align: center;
   color: #1e90ff;
 }
+
+.light .button:hover,
+.light .button.active {
+  background-color: var(--light-primary);
+  color: var(--white);
+}
+
 .light .button.operator {
   background-color: var(--light-item-bg);
   color: var(--light-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.light .button.operator:hover,
+.light .button.operator.active {
+  background-color: var(--dark-background-item);
+  color: var(--white);
 }
 
 .light .button.function {
-  background-color: #1e90ff;
+  background-color: var(--light-secondary);
   color: #fff;
 }
+
+.light .button.function:hover,
+.light .button.function.active {
+  background-color: var(--equation-text);
+  color: #fff;
+}
+
 .light .button.special {
-  padding: 0px;
+  padding: 0;
   font-weight: 500;
   color: var(--equation-text);
 }
+
+.light .button.special:hover,
+.light .button.special.active {
+  background-color: var(--light-primary);
+  color: var(--white);
+}
+
 .light .button.plus,
 .light .button.equal {
   grid-row: span 2;
@@ -237,42 +258,45 @@ color: var(--white);
   padding: 16px;
   background-color: var(--dark-background);
 }
+
 .dark .display {
   text-align: right;
-  padding-bottom: 70px;
-  padding-top: 104px;
+  padding: 104px 0 70px;
 }
 
-.dark .calculator .display .equation {
+.dark .display .equation {
   color: var(--equation-text);
   font-size: 1.5rem;
 }
 
-.dark .calculator .display .result {
+.dark .display .result {
   font-size: 3rem;
   font-weight: 500;
   color: var(--white);
 }
 
-.dark .calculator .buttons {
+.dark .buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.dark .calculator .buttons .left {
+
+.dark .buttons .left {
   display: grid;
   grid-template-columns: repeat(3, minmax(62px, 1fr));
   gap: 10px;
 }
+
 .dark .button.zero {
   grid-column: span 2;
 }
 
-.dark .calculator .buttons .right {
+.dark .buttons .right {
   display: grid;
   grid-template-columns: repeat(1, minmax(62px, 1fr));
   gap: 10px;
 }
+
 .dark .button {
   display: flex;
   align-items: center;
@@ -288,22 +312,48 @@ color: var(--white);
   text-align: center;
   color: #1e90ff;
 }
+
+.dark .button:hover,
+.dark .button.active {
+  background-color: var(--light-primary);
+  color: var(--white);
+}
+
 .dark .button.operator {
   background-color: var(--dark-item-bg);
   color: var(--dark-primary);
+}
+
+.dark .button.operator:hover,
+.dark .button.operator.active {
+  background-color: var(--dark-secondary);
+  color: var(--white);
 }
 
 .dark .button.function {
   background-color: var(--dark-primary);
   color: #fff;
 }
-.dark .button.special {
-  padding: 0px;
-  font-weight: 500;
 
+.dark .button.function:hover,
+.dark .button.function.active {
+  opacity: 0.7;
+  color: #fff;
+}
+
+.dark .button.special {
+  padding: 0;
+  font-weight: 500;
   background-color: var(--dark-background-item);
   color: #a5a5a5;
 }
+
+.dark .button.special:hover,
+.dark .button.special.active {
+  background-color: var(--light-primary);
+  color: var(--white);
+}
+
 .dark .button.plus,
 .dark .button.equal {
   grid-row: span 2;

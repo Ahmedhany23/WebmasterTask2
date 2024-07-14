@@ -3,6 +3,9 @@
 -----------------------------*/
 const display_result = document.querySelector(".display .result");
 const display_equation = document.querySelector(".display .equation");
+const buttons = document.querySelectorAll(".buttons .button");
+
+
 
 /* When click into key add value */
 
@@ -87,6 +90,21 @@ const isOperator = (input) => {
   return ["+", "-", "*", "/"].includes(input);
 };
 
+/* Active Button */
+let activeButton = null;
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    /* Remove All Active class from every button */
+  buttons.forEach((btn) => btn.classList.remove("active"));
+    
+    /* Add class active when you click to the button */
+  button.classList.add("active");
+  });
+});
+
+
+
+
 /* --------------
     Change Mode
 ----------------- */
@@ -108,3 +126,4 @@ const ChangeMode = () => {
     ModeBtn.classList.add("light");
   }
 };
+
