@@ -1,0 +1,278 @@
+/*---------------  
+    Global 
+-----------------*/
+
+:root {
+  --white: white;
+  --body-bg: #f4f4f4;
+  --primary-bg: #333;
+  --secondary-bg: #444;
+  --font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  position: relative;
+  background-color: var(--body-bg);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+  color: var(--white);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding-block: 30px;
+}
+
+/*--------------
+     Header
+----------------*/
+
+.header {
+  background-color: var(--primary-bg);
+  padding-block: 10px;
+  text-align: center;
+}
+
+/*----------------
+     Navigation
+------------------*/
+
+nav {
+  background: var(--secondary-bg);
+  padding-block: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+nav ul li a {
+  color: var(--white);
+}
+
+/*-----------------
+        Main
+------------------ */
+
+.main {
+  padding: 20px;
+}
+
+/* Home 
+---------------------------------- */
+
+#home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#home .margin {
+  text-align: center;
+  margin: auto;
+}
+
+/* Services 
+---------------------------------- */
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#services .flex {
+  display: flex;
+  gap: 20px;
+}
+#services .flex .service {
+  padding: 30px 20px;
+  text-align: center;
+  background: #fff;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  #services .flex {
+    flex-direction: column;
+  }
+}
+
+/* About
+---------------------------------- */
+
+#about {
+  position: relative;
+  text-align: center;
+}
+
+#about .position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Contact Us
+---------------------------------- */
+
+#contact {
+  display: table;
+  width: 100%;
+}
+
+#contact .table {
+  display: table-cell;
+
+  vertical-align: middle;
+
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form button {
+  background: var(--primary-bg);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Gallery
+---------------------------------- */
+
+.gallery h2 {
+  display: grid;
+  place-content: center;
+  padding-block: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery-item {
+  background: var(--white);
+  padding: 10px;
+  height: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
+  max-width: 100%;
+}
+
+/*
+Center Div
+ -----------------------------*/
+
+/* first */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+/* second */
+.center {
+  display: grid;
+  place-items: center;
+  height: 400px;
+}
+
+/* third */
+.center {
+  position: relative;
+  height: 400px;
+}
+.center .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* fourth */
+.center {
+height: 400px;
+  text-align: center;
+}
+.center .box {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* fifth */
+.center {
+  height: 400px;
+  text-align: center;
+}
+.center .box {
+  margin: auto;
+}
+
+.center .box {
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  height: 250px;
+  background-color: white;
+}
+
+/*
+ Footer
+ -----------------------------*/
+.footer {
+  background: var(--primary-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
