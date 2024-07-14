@@ -18,13 +18,6 @@ close.onclick = () => {
 
 
 
-
-
-
-
-
-
-
 /* ---------------
     Number Counter
 ------------------ */
@@ -42,6 +35,7 @@ valueDisplays.forEach((valueDisplays) => {
     }
   }, duration);
 });
+
 /* ---------------
     Scroll To Our Services
 ------------------ */

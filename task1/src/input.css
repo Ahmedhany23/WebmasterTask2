@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: Inter;
-  src: url(/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
   font-display: swap;
 }
 
@@ -21,7 +21,7 @@
   font-family: Inter;
 }
 
-body{
+body {
   position: relative;
 }
 
@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-  @apply font-semibold text-4xl leading-[45px] lg:text-[58px] lg:leading-[70.19px] text-[var(--primary)] ;
+  @apply font-semibold text-4xl leading-[45px] lg:text-[58px] lg:leading-[70.19px] text-[var(--primary)];
 }
 
 li a {
@@ -50,13 +50,13 @@ li a {
 }
 
 .btn {
-  @apply bg-[var(--primary)] hover:bg-[var(--secondary)] duration-200 rounded ;
+  @apply bg-[var(--primary)] hover:bg-[var(--secondary)] duration-200 rounded;
 }
 .btn a {
   @apply text-[var(--white)];
 }
 .section {
-  @apply py-20;
+  @apply py-10 md:py-20;
 }
 
 /* -----------------------------

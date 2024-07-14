@@ -97,6 +97,7 @@ body.dark {
 }
 
 /* Media Query */
+
 /* Medium Screen */
 @media screen and (max-width: 968px) {
   .mode {
