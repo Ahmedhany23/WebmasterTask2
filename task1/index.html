@@ -35,7 +35,7 @@
         </a>
         <nav>
           <ul class="hidden gap-10 lg:flex lg:flex-row items-center">
-            <li><a href="">Home</a></li>
+            <li><a href="" class="active">Home</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Support</a></li>
@@ -94,23 +94,23 @@
           class="flex flex-col items-center gap-20 xl:gap-0 xl:flex-row xl:items-start"
         >
           <div
-            class="flex flex-col gap-10 p-4 items-center lg:items-start lg:p-0 lg:gap-20 2xl:w-full 2xl:min-w-[933px]"
+            class="flex flex-col gap-10 p-4 items-center lg:items-start lg:p-0 lg:gap-12 2xl:w-full 2xl:min-w-[933px]"
           >
             <h1>Interior Design</h1>
             <p
-              class="paragraph text-xl md:text-2xl lg:max-w-3xl leading-[42.12px!important]"
+              class="paragraph text-lg leading-8 sm:text-xl md:text-2xl lg:max-w-3xl sm:leading-[42.12px!important]"
             >
               Step into a world where the art of Interior Design is meticulously
               crafted to bring together timeless elegance and cutting-edge
               modern Innovation, Allowing you to transform your living spaces
               into the epitome of luxury and sophistication
             </p>
-            <button class="btn w-[302px] h-[86px] rounded text-2xl">
+            <button class="btn w-[302px] h-[86px] rounded text-2xl xl:mt-10">
               <a href="#">Start Project</a>
             </button>
 
             <div
-              class="info flex flex-col justify-center md:justify-start md:flex-row gap-10"
+              class="info flex flex-col justify-center md:justify-start md:flex-row gap-10 xl:mt-20"
             >
               <div class="flex flex-col items-center gap-3">
                 <p
@@ -151,7 +151,7 @@
           </div>
 
           <div
-            class="flex flex-col gap-6 w-full justify-center items-center p-10 lg:p-20 xl:p-0"
+            class="flex flex-col gap-6 w-full justify-center items-center p-10 lg:p-20 xl:p-0 "
           >
             <div class="w-full flex items-end justify-end">
               <img
@@ -188,7 +188,7 @@
       <!-- Container -->
       <div class="container mx-auto">
         <!-- Services Title -->
-        <div class="flex items-center gap-10  py-10 md:py-20">
+        <div class="flex items-center gap-10 py-10 md:py-20">
           <div
             class="border-[3px] w-[50px] md:w-[100px] h-0 border-[var(--primary)]"
           ></div>
@@ -249,12 +249,18 @@
       <div class="container mx-auto">
         <!-- accordion grid -->
         <div
-          class="flex flex-col-reverse items-center xl:flex-row xl:items-start gap-[30px] p-1 sm:p-0"
+          class="flex flex-col-reverse items-center xl:flex-row xl:items-start gap-[30px] 2xl:gap-[90px] p-1 sm:p-0"
         >
-        <!-- Image -->
-          <img src="./images/image.webp" alt="image" class="p-4 xl:p-0" />
+          <!-- Image -->
+          <img
+            src="./images/image.webp"
+            alt="image"
+            class="p-4 xl:p-0 lg:w-[600px] lg:h-[600px] 2xl:w-full 2xl:h-full"
+          />
 
-          <div class="flex flex-col gap-10 xl:justify-normal xl:items-stretch">
+          <div
+            class="flex flex-col gap-10 xl:gap-7 2xl:gap-10 xl:justify-normal xl:items-stretch"
+          >
             <h2 class="text-center xl:text-left">
               Designing Your Dream With Brilliance
             </h2>
@@ -401,7 +407,7 @@
 
           <!-- Cards -->
 
-          <div class="2xl:absolute -bottom-20 right-0 flex xl:mx-auto 2xl:mx-0 ">
+          <div class="2xl:absolute -bottom-20 right-0 flex xl:mx-auto 2xl:mx-0">
             <!-- Card 1-->
             <div
               class="w-full sm:w-[600px] sm:h-[600px] bg-[var(--primary)] border-[20px] border-white flex flex-col gap-16 items-start px-10 py-20"
@@ -460,16 +466,16 @@
         </div>
 
         <div
-          class="flex justify-center  xl:ml-8 2xl:ml-0 xl:justify-start items-center mt-5 gap-5"
+          class="flex justify-center xl:ml-8 2xl:ml-0 xl:justify-start items-center mt-5 gap-5"
         >
           <button
-          type="button"
+            type="button"
             class="w-[73px] h-[73px] rounded bg-[#f1f1f1] flex items-center justify-center"
           >
             <img src="./icons/arrowL.png" alt="" />
           </button>
           <button
-          type="button"
+            type="button"
             class="w-[73px] h-[73px] rounded bg-[#f1f1f1] flex items-center justify-center"
           >
             <img src="./icons/arrowR.png" alt="" />
@@ -529,16 +535,33 @@
             </p>
             <ul class="flex gap-5">
               <li>
-                <a href="https://facebook.com/" aria-label="Facebook" target="_blank"><img src="./icons/Facebook.png" alt="Facebook" /></a>
+                <a
+                  href="https://facebook.com/"
+                  aria-label="Facebook"
+                  target="_blank"
+                  ><img src="./icons/Facebook.png" alt="Facebook"
+                /></a>
               </li>
               <li>
-                <a href="https://x.com/" aria-label="Twitter" target="_blank"><img src="./icons/X.png" alt="Twitter" /></a>
+                <a href="https://x.com/" aria-label="Twitter" target="_blank"
+                  ><img src="./icons/X.png" alt="Twitter"
+                /></a>
               </li>
               <li>
-                <a href="https://instagram.com/" aria-label="Instagram" target="_blank"><img src="./icons/Instagram.png" alt="Instagram" /></a>
+                <a
+                  href="https://instagram.com/"
+                  aria-label="Instagram"
+                  target="_blank"
+                  ><img src="./icons/Instagram.png" alt="Instagram"
+                /></a>
               </li>
               <li>
-                <a href="https://linkdin.com/" aria-label="Linkdin" target="_blank"><img src="./icons/Linkdin.png" alt="Linkdin" /></a>
+                <a
+                  href="https://linkdin.com/"
+                  aria-label="Linkdin"
+                  target="_blank"
+                  ><img src="./icons/Linkdin.png" alt="Linkdin"
+                /></a>
               </li>
             </ul>
           </div>
@@ -547,7 +570,6 @@
           >
             <!-- Our Services -->
             <div class="flex flex-col gap-6">
-
               <!-- Service-item -->
               <p class="text-white text-2xl font-semibold">Our Services</p>
               <ul class="flex flex-col lg:gap-6">
@@ -574,7 +596,7 @@
               </ul>
             </div>
 
-             <!-- Service-item -->
+            <!-- Service-item -->
             <div class="flex flex-col gap-6">
               <p class="text-white text-2xl font-semibold whitespace-nowrap">
                 Our Services
@@ -603,7 +625,7 @@
               </ul>
             </div>
 
-             <!-- Service-item -->
+            <!-- Service-item -->
             <div class="flex flex-col gap-6">
               <p class="text-white text-2xl font-semibold">Our Services</p>
               <p class="text-[#d1d1d1] font-medium text-[22px]">

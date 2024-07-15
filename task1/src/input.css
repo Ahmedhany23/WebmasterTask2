@@ -30,7 +30,7 @@ html {
 }
 
 h1 {
-  @apply font-medium text-7xl leading-[90px] lg:text-[133px] lg:leading-[160.96px] text-[var(--primary)];
+  @apply font-medium text-5xl sm:text-7xl sm:leading-[90px] lg:text-[133px]  lg:leading-[160.96px] text-[var(--primary)];
 }
 
 h2 {
@@ -38,9 +38,11 @@ h2 {
 }
 
 li a {
-  @apply font-semibold text-lg leading-[90px] lg:text-[22px] lg:leading-[26.63px] text-[var(--primary)];
+  @apply font-semibold text-lg leading-[90px] lg:text-[22px] lg:leading-[26.63px] text-[var(--secondary)];
 }
-
+li a.active {
+  @apply text-[var(--primary)];
+}
 .title {
   @apply font-semibold text-3xl leading-[36.31px];
 }
@@ -58,6 +60,7 @@ li a {
 .section {
   @apply py-10 md:py-20;
 }
+
 
 /* -----------------------------
             Header
